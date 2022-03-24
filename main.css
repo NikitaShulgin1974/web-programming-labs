@@ -1,0 +1,126 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+    color:white;
+    text-align: center;
+}
+
+header .info {
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 14px;
+}
+
+header h1 {
+    background-color: rgb(240, 98, 98);
+    color: #333;
+    margin: 0;
+    padding: 20px 0 20px 15px;
+}
+
+nav {
+    background-color: rgb(240, 98, 98);
+    padding: 10px;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+    display: inline-block;
+    width: 200px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 15px 0;
+    display: block;
+    transition: all 300ms;
+}
+nav ul li a:hover {
+    color: rgb(170, 0, 0);
+}
+
+nav .searchbox {
+    display: inline-block;
+    padding-top: 11px;
+}
+
+nav .searchbox button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 300ms;
+}
+nav .searchbox button:hover {
+    opacity: 1;
+}
+
+footer {
+    padding: 25px;
+    color: #eee;
+    background-color: #333;
+    text-align: center;
+}
+
+main {
+    background-color: white;
+    color: #333;
+    padding-bottom: 250px;
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    padding: 7px;
+    border-radius: 7px;
+    transition: all 300ms;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: #333;
+    transition: all 300ms;
+}
+
+.card:hover {
+    box-shadow: 0 0 7px rgb(170, 0, 0);
+}
+
+.card a:hover {
+    color: rgb(170, 0, 0);
+}
+
+.card .image {
+    height: 350px;
+}
+
+.card .image img{
+    max-width: 250px;
+    max-height: 350px;
+}
+
+.card .image img:hover {
+    max-width: 300px;
+    max-height: 400px;
+}
+.card .price {
+    margin-bottom: 20px;
+}
