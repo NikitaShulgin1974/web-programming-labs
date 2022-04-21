@@ -53,7 +53,19 @@
                 }
 
                 let cards = document.getElementsByClassName('card');
+                if (name == '') {
+                    cards[0].style.display = "inline-block";
+                    cards[1].style.display = "inline-block";
+                    cards[2].style.display = "inline-block";
+                }
+                else {
+                    cards[0].style.display = "none";
+                    cards[1].style.display = "none";
+                    cards[2].style.display = "none";
+                }
+
                 let card = cards[productNumber];
+                card.style.display = "inline-block";
                 card.style.border = '1px dashed red';
                 card.style.backgroundColor = 'rgb(240, 98, 98)';
 

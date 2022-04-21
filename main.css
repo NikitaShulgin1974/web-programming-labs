@@ -124,3 +124,6 @@ main {
 .card .price {
     margin-bottom: 20px;
 }
+.card input[type="button"] {
+    display: none;
+}
