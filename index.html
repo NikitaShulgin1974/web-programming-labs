@@ -9,6 +9,16 @@
             console.error("Сообщение об ошибке");
             console.warn("Сообщение - предупреждение");
 
+            function showButton(card) {
+                let b=card.getElementsByTagName("input")[0];
+                b.style.display="inline";
+            }
+
+            function hideButton(card) {
+                let b2=card.getElementsByTagName("input")[0];
+                b2.style.display="none";
+            }
+
             function buy() {
                 alert('Вы уже купили этот товар');
                 return false;
@@ -85,7 +95,7 @@
         </nav>
 
         <main>
-            <div class="card">
+            <div class="card" onmouseover="showButton(this)" onmouseout="hideButton(this)">
                 <a href="product1.html">
                     <div class="image"><img src="15625937_28645464_1000.jpg"></div>
                     <div class="product-name">Adidas-yeezy</div>
@@ -93,7 +103,7 @@
                 </a>
                 <input type="button" value="Купить" onclick="return buy()">
             </div>
-            <div class="card">
+            <div class="card" onmouseover="showButton(this)" onmouseout="hideButton(this)">
                 <a href="product1.html">
                     <div class="image"><img src="15645873_28291167_1000.jpg"></div>
                     <div class="product-name">Nike
@@ -102,7 +112,7 @@
                 </a>
                 <input type="button" value="Купить" onclick="return buy()">
             </div>
-            <div class="card">
+            <div class="card" onmouseover="showButton(this)" onmouseout="hideButton(this)">
                 <a href="product1.html">
                     <div class="image"><img src="15193294_26127853_1000.jpg"></div>
                     <div class="product-name">New Balance
