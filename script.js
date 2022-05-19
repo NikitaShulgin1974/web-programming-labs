@@ -100,4 +100,28 @@ function loaded() {
     });
 
     generateMenu();
+
+    function generateList(){
+        let list = document.querySelector('main');     
+    
+        let items = [    
+            {text:'Adidas-yeezy', src:"15625937_28645464_1000.jpg", price:'Цена: 90025'},    
+            {text:'Nike кроссовки SB Dunk Low из коллаборации с Grateful Dead', src:"15645873_28291167_1000.jpg", price:'Цена: 90500'},    
+            {text:'New Balance кроссовки 992 Joe Freshgoods No Emotions Are Emotions', src:"15193294_26127853_1000.jpg", price:'Цена: 236787'}    
+        ];    
+        for(let i=0; i<items.length; i++) {    
+            let card = document.createElement('div');    
+            card.className = "card";    
+            card.innerHTML = `        
+                <div class="product-name">${items[i].text}</div>    
+                <div class="image"><img src="${items[i].src}"></div>    
+                <div>${items[i].price}</div>
+    
+            </a>
+    
+            <input type="button" value="Купить" onclick="return notReadyYet()">  `;    
+            list.appendChild(card);    
+        }    
+    }   
+        generateList();
 }
