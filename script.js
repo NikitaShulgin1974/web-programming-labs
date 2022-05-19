@@ -1,7 +1,3 @@
-console.log("Всем привет!!! :)");
-console.error("Сообщение об ошибке");
-console.warn("Сообщение - предупреждение");
-
 function showButton(card) {
     let b=card.getElementsByTagName("input")[0];
     b.style.display="inline";
@@ -27,8 +23,9 @@ function email() {
     return false;
 }
 
-function notReadyAlert() {
+function notReadyAlert(event) {
     alert('Sorry, not ready yet!\nИзвините, еще не готово!');
+    event.preventDefault();
     return false;
 }
 
@@ -68,10 +65,39 @@ function search() {
     }, 2000);
 }
 
+function generateMenu() {
+    let menu = document.querySelector('nav.main-menu ul');
+    menu.innerHTML = '';
+
+    let items = [
+        {href: 'index.html', text: 'Товары'},
+        {href: '', text: 'Контакты'},
+        {href: '', text: 'Доставка'},
+        {href: '', text: 'Акция'},
+        {href: 'about-us.html', text: 'О нас'},
+    ];
+
+    for (let i = 0; i<items.length; i++) {
+        let link = document.createElement('a');
+        link.innerText = items[i].text;
+        link.href = items[i].href;
+        if(items[i].href == ''){
+            link.addEventListener('click', notReadyAlert);            
+        }
+
+        let menuItem = document.createElement('li');
+        menuItem.appendChild(link);
+
+        menu.appendChild(menuItem);
+    }    
+}
+
 function loaded() {
     let searchbox = document.getElementById('search');
     searchbox.addEventListener('keydown', function (key) {
         if (key.key == 'Enter')
             search();
     });
+
+    generateMenu();
 }
